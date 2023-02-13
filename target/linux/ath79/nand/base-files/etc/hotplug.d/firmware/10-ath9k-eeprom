@@ -12,6 +12,9 @@ case "$FIRMWARE" in
 	8dev,rambutan)
 		caldata_extract "caldata" 0x1000 0x800
 		;;
+	linkind,lds-g152)
+		caldata_extract "art" 0x1000 0x440
+		;;
 	meraki,mr18)
 		. /lib/upgrade/nand.sh
 
@@ -29,6 +32,9 @@ case "$FIRMWARE" in
 	;;
 "ath9k-eeprom-pci-0000:00:00.0.bin")
 	case $board in
+	linkind,lds-g152)
+		caldata_extract "art" 0x1000 0x440
+		;;
 	meraki,mr18)
 		. /lib/upgrade/nand.sh
 
@@ -46,6 +52,9 @@ case "$FIRMWARE" in
 	;;
 "ath9k-eeprom-pci-0000:01:00.0.bin")
 	case $board in
+	linkind,lds-g152)
+		caldata_extract "art" 0x1000 0x440
+		;;
 	meraki,mr18)
 		. /lib/upgrade/nand.sh
 

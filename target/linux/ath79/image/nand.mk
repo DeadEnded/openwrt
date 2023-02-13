@@ -278,6 +278,17 @@ define Device/glinet_gl-x1200-nor
 endef
 TARGET_DEVICES += glinet_gl-x1200-nor
 
+define Device/linkind_lds-g152
+  SOC := qca9531
+  DEVICE_VENDOR := linkind
+  DEVICE_MODEL := lds-g152
+  DEVICE_PACKAGES := uboot-envtools kmod-usb2 kmod-i2c-gpio \
+	kmod-usb-serial-pl2303 kmod-usb-serial-ch341 \
+	ser2net i2c-tools
+  IMAGE_SIZE := 34816k
+endef
+TARGET_DEVICES += linkind_lds-g152
+
 define Device/linksys_ea4500-v3
   SOC := qca9558
   DEVICE_VENDOR := Linksys
